@@ -19,17 +19,21 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         EditText t = (EditText) findViewById(R.id.editText);
         EditText t2 = (EditText) findViewById(R.id.editText2);
-        EditText t3 = (EditText) findViewById(R.id.editText3);
-        int a,b,c;
+        EditText result = (EditText) findViewById(R.id.editText3);
+        EditText t3 = (EditText) findViewById(R.id.editText4);
+        EditText t4 = (EditText) findViewById(R.id.editText5);
+        int a,b,c,d,average;
         try{
             a=Integer.parseInt(t.getText().toString());
             b=Integer.parseInt(t2.getText().toString());
-            c=a+b;
-            t3.setText(Integer.toString(c));
+            c=Integer.parseInt(t3.getText().toString());
+            d = Integer.parseInt(t4.getText().toString());
+            average = (a+b+c+d)/4;
+            result.setText(Integer.toString(average));
 
         }
         catch (Exception e){
-            t3.setText("Ошибка");
+            result.setText("Ошибка");
         }
     }
 }
